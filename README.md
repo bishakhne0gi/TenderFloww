@@ -1,9 +1,9 @@
-# DIVERSION 2k23 - Ledged
+# Hack For Bengal Season2 - TenderFlow
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/IRSHIT033/Ledged/">
+  <a href="https://github.com/bishakhne0gi/TenderFloww">
     <img src="https://user-images.githubusercontent.com/63441472/221374116-f811bcfd-d878-480c-ae07-80909064296d.png" alt="Logo" width="120" height="120">
   </a>
 
@@ -82,7 +82,7 @@
 - It also enables the user to systematically preview the past ledgers
 - This makes it immune to tampering or manipulation.
 
-* **Transparency** of data is maintained.
+- **Transparency** of data is maintained.
 
 ### 🙌Overview
 
