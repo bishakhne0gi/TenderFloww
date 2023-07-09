@@ -4,8 +4,9 @@
 <br />
 <div align="center">
   <a href="https://github.com/bishakhne0gi/TenderFloww">
-    <img src="https://user-images.githubusercontent.com/63441472/221374116-f811bcfd-d878-480c-ae07-80909064296d.png" alt="Logo" width="120" height="120">
-  </a>
+    <img src="https://github.com/bishakhne0gi/TenderFloww/assets/50258639/d6f8c2b3-9a96-4395-9712-8543771c53b9" alt="Logo" width="120" height="120">
+  
+
 
 # TenderFlow
 
