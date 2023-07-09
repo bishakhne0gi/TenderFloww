@@ -57,7 +57,8 @@
 <!-- ABOUT THE PROJECT -->
 ## 🤩🤩About The Project🤩🤩
 
-<https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-8f20-27afd96658d1.mp4>
+![LandingPage](https://github.com/bishakhne0gi/TenderFloww/assets/63441472/cc69c1d7-5adf-4d11-9bc9-be2e8aac563e)
+>
 
 ### 💭Inspiration
 
