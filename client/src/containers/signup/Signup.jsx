@@ -41,10 +41,11 @@ const Signup = () => {
 
     try {
       const { data } = await axios.post(
-        "/signup",
+        "http://localhost:5000/signup",
         signupState,
         axiosConfig
       );
+      navigate("/projects");
       console.log(data);
     } catch (e) {
       console.log(e);

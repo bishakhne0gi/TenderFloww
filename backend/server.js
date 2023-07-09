@@ -10,10 +10,12 @@ app.disable("x-powered-by");
 app.use(helmet());
 app.use(express.json());
 
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5174",
+    credentials: true,
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
