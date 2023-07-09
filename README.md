@@ -110,12 +110,14 @@
 
 - <img src = "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" style="margin-top: 40px" height=30px width=30px > **React** - for building the frontend UI <br>
 - <img src = "https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height=30px width=30px>**Vite** - as Module bundler instead of webpack <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221376795-45668137-c096-470e-b288-ea98f1728e94.png" height=40px width=40px > **Etherium**- as main blockchain <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221376691-706e8087-7ba9-45be-9d60-583b0fdf518d.png" height=40px width=40px> **Solidity**- for writing smart contract <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221376973-6ecb124f-12b4-429f-86ac-96afe68d258c.png" height=40px width=40px > **5ire** - RPC to host our dapp and as our main blockchain service<br>
+- <img src = "https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height=40px width=40px > **Flow**- as main blockchain <br>
+- <img src = "https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height=40px width=40px> **Cadance**- for writing smart contract <br>
 - <img src = "https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height=40px width=40px> **Filecoin**- as IPFS<br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190890501-54045447-d458-4413-a1fa-91a4216bfb44.svg" height=40px width=80px> -  Build on Top of **Polygon** chain <br>
+- <img src = "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" height=40px width=140px > **GCP** - as our cloud service provider <br>
+- <img src = "https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height=40px width=40px> -  Postman for Documenting our APIs <br>
 - GoDaddy for our domain registry
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +139,7 @@ _How to setup this project_
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/arnab2001/Ledged.git
+   git clone https://github.com/bishakhne0gi/TenderFloww.git
    ```
 
 3. Install all the NPM packages
@@ -149,22 +151,24 @@ _How to setup this project_
 4. configure `.env` and add
 
    ```env
-   DB_CONNECT = 'mongodb+srv://<username>:<password>@cluster0.dehf4yw.mongodb.net/?retryWrites=true&w=majority'
+   Coming Soon
    ```
 
-5. Create a wallet.json file and add your public and private key
+5. Install and Configure Flow CLI , create and add account 
 
-   ```json
-   {
-    "privateKey": "<private_key>",
-    "publicKey": "<public_key>"
-    }
+   ```sh
+   flow accounts create \
+    --key a69c6986e846ba6d0....1397f5904cd319c3e01e96375d5777f1a47010 \
+    --host access.devnet.nodes.onflow.org:9000 \
+    --signer my-testnet-account
     ```
 
-6. Then import wallet using the private key, use the following command
+   https://developers.flow.com/tutorials/testnet-deployment
+
+6. Then Deploy project on your testnet, use the following command
 
   ```sh
-  Metamask
+  flow project deploy
   ```
 
 7. run
@@ -188,14 +192,13 @@ _How to setup this project_
 &nbsp;
 
 - [x] landing page
-- [x] Avatar component
-- [x] Ledger page
-- [x] PastLedger page
+- [x] Login/signUp component
+- [x] place bids
+- [x] Admin panel
 - [x] Adding smart contract
-- [x] Intigrate 5ire
+- [x] building backend
+- [x] Intigrating both samrt contract and  
 - [x] Intigrate filecoin
-- [x] Add backend for Autosave
-- [ ] deploy in digital ocean
 
 See the [open issues](https://github.com/arnab2001/Ledged/issues) for a full list of proposed features (and known issues).
 
