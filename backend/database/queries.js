@@ -18,18 +18,20 @@ exports.getProfileData = `SELECT name, email, registration, address, photo FROM 
 
 // Create New Table Tenders if not exists
 exports.createNewTableTenders = `CREATE TABLE IF NOT EXISTS tenders (
-    name VARCHAR(128) NOT NULL, 
-    id VARCHAR(128) NOT NULL, 
-    description MEDIUMTEXT NOT NULL, 
-    criteria TEXT NOT NULL, 
+    _title VARCHAR(128) NOT NULL, 
+    tender_id VARCHAR(128) NOT NULL, 
+    _ipfsHash VARCHAR(128) NOT NULL,
+    _description MEDIUMTEXT NOT NULL, 
+    _minimumExp TEXT NOT NULL, 
+    _exp TEXT NOT NULL, 
     opening_date DATE NOT NULL, 
-    closing_date DATE NOT NULL, 
-    flow_closing_price INT, 
+    biddingLength INT NOT NULL,
+    startPrice INT NOT NULL, 
     winner_email VARCHAR(128)
 );`;
 
 // Insert Tender's data
-exports.insertTendersData = `INSERT INTO tenders (name, id, description, criteria, opening_date, closing_date) VALUES (?, ?, ?, ?, ?, ?);`;
+exports.insertTendersData = `INSERT INTO tenders (_title, tender_id, _ipfsHash, _description, _minimumExp, _exp, opening_date, biddingLength, startPrice) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`;
 
 // Display All Tender's data
 exports.displayAllTendersData = `SELECT * FROM tenders`;
