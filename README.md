@@ -233,7 +233,7 @@ Distributed under the MIT License
  <b>Made with ❤️ by team Bugbyte
 <h1>
 <a href="https://github.com/bishakhne0gi/TenderFloww/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=arnab2001/ledged&&max=817" />
+  <img src="https://contrib.rocks/image?repo=bishakhne0gi/TenderFloww&&max=817" />
 </a>
 </div>
 
