@@ -1,0 +1,17 @@
+.list__container {
+    background-color: var(--color-boxShadow);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    border-radius: 30px;
+    transition: ease 0.5s;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.list__container:hover {
+    background-color: var(--color-primary);
+    color: var(--color-boxShadow);
+    cursor: pointer;
+}

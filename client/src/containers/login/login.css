@@ -1,0 +1,107 @@
+.login__overlay {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    opacity: 40%;
+}
+
+
+
+.login__container {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 9px 4px 24px 0px var(--color-boxShadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 60vh;
+    width: 40vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login__input {
+    padding: 0rem 2rem;
+    border-radius: 30px;
+    background-color: #2a2b32;
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    height: 81px;
+    border: 0;
+    font-family: Epilogue;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px 0px;
+}
+
+
+.login__header {
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #2a2b32;
+    font-weight: 700;
+}
+
+
+.input__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+
+.btn__login_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: var(--color-primary);
+    color: var(--color-boxShadow);
+    font-weight: bold;
+    width: 150px;
+    height: 60px;
+    border: 0;
+    font-family: Epilogue;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+}
+
+.btn__login_container_outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 15px;
+    transition: ease 0.5s;
+}
+
+.btn__signup:hover {
+    color: var(--color-primary);
+    cursor: pointer;
+}
