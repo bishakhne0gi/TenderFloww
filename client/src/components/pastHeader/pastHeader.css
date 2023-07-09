@@ -1,0 +1,18 @@
+.activeHeader__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.header_style {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+}

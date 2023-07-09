@@ -1,0 +1,11 @@
+.desc__container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+}
+
+.desc__requirement {
+    color: #5761F2;
+}

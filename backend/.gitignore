@@ -1,0 +1,8 @@
+node_modules
+key.json
+.env
+*.tar.gz
+*.exe
+google-cloud-sdk
+npm-debug.log
+Help.md

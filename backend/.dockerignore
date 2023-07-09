@@ -1,0 +1,6 @@
+node_modules
+.env
+cloud-sql-proxy
+google-cloud-cli-437.0.1-linux-x86_64.tar.gz
+google-cloud-sdk
+npm-debug.log

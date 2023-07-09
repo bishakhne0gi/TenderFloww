@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Rajdhani:wght@500&display=swap');
+
+
+:root {
+    --color-primary: #0A18E1;
+    --color-tertiary: #3056C2;
+    --color-secondary: #000000;
+    --color-boxShadow: #1E1E1E;
+    font-family: Epilogue;
+    background-image: url("./assets/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+
+}
+
+
+
+.section__padding {
+    padding: 3rem 4rem;
+}
+
+.section__margin {
+    margin: 3rem 4rem;
+}
+
+
+.inner_section__padding {
+    padding: 1rem 0rem;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 5px;
+    opacity: 0%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-tertiary);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
