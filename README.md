@@ -6,8 +6,6 @@
   <a href="https://github.com/bishakhne0gi/TenderFloww">
     <img src="https://github.com/bishakhne0gi/TenderFloww/assets/50258639/d6f8c2b3-9a96-4395-9712-8543771c53b9" alt="Logo" width="120" height="120">
   
-
-
 # TenderFlow
 
 ## Decentralised auction for getting tenders
@@ -234,7 +232,7 @@ Distributed under the MIT License
 <h1 align="center">
  <b>Made with ❤️ by team Bugbyte
 <h1>
-<a href="https://github.com/arnab2001/Ledged/contributors">
+<a href="https://github.com/bishakhne0gi/TenderFloww/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=arnab2001/ledged&&max=817" />
 </a>
 </div>
