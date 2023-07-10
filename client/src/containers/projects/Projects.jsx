@@ -38,13 +38,13 @@ const Projects = () => {
       .finally(() => console.log(tendersData));
 
   // Fetch tender id
-  const { data, error } = useSWR(
-    "http://localhost:5000/tender/display",
-    fetcher
-  );
-  if (error) {
-    console.log(error.response?.data);
-  }
+  // const { data, error } = useSWR(
+  //   "http://localhost:5000/tender/display",
+  //   fetcher
+  // );
+  // if (error) {
+  //   console.log(error.response?.data);
+  // }
 
   return (
     <>
