@@ -57,5 +57,9 @@ exports.placeBid = `INSERT INTO placedBid(tender_id, email, biddingAmount) VALUE
 // Update Winner Email if Bidding amount is less than the current winner
 exports.updateWinner = `UPDATE tenders SET winner_email = ?, currentMinDemand = ? WHERE tender_id = ?;`
 
+// Fetch experience of the current winner
+exports.fetchExpWinner = `SELECT exp FROM bidders WHERE email=(SELECT winner_email FROM tenders WHERE email = ? );`
+
+
 // Update Bidder's profile image
 exports.updateBiddersProfileImage = `UPDATE bidders SET photo = ? WHERE email = ?;`;

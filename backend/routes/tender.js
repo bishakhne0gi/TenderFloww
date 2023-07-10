@@ -9,6 +9,7 @@ const {
   createBiddingTable,
   placeBid,
   updateWinner,
+  fetchExpWinner,
 } = require("../database/queries");
 const db_config = require("../database/cloudsql");
 const authorization = require("../middleware/authorization");
@@ -252,9 +253,15 @@ router.post("/placebid", authorization, (request, response) => {
 // Auction Settle
 router.post("/settle", (request, response) => {
     // Fetch experience of Current Winner Email
+    try {
+      const db = mysql.createConnection(db_config);
+      db.query(fetchExpWinner, [])
+    } catch (error) {
+      
+    }
 
     // Add experience of the current_tender with winner email
-    
+
 })
 // Get NFTS of a bidder
 module.exports = router;
