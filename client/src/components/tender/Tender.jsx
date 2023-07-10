@@ -55,6 +55,9 @@ const Tender = ({ data }) => {
           <div className="tender_right_body section__padding">
             {data?._description}
           </div>
+          <div className="date_list_settle">
+            <span className="date_val_settle">Settle Bid</span>
+          </div>
         </div>
       </div>
     </>

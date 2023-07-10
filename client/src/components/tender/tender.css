@@ -98,3 +98,26 @@
     display: flex;
     justify-content: space-between;
 }
+.date_list_settle
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.date_val_settle
+{
+    background-color: var(--color-primary);
+    margin: 10px 0 0 10px;
+    width: 10rem;
+    padding: 20px 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-radius: 10px;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+.date_val_settle:hover
+{
+    background-color: var(--color-boxShadow) ;
+    border: 2px solid white;
+}

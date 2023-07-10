@@ -189,7 +189,6 @@ router.post("/placebid", authorization, (request, response) => {
     response.status(400).json({ message: "something went wrong. Try again!" });
     return;
   }
-
   if (!biddingAmount) {
     response
       .status(400)
