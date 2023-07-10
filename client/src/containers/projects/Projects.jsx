@@ -28,6 +28,24 @@ const Projects = () => {
     navigate("/login");
   };
 
+  const [tendersData, setTendersData] = useState();
+
+  const fetcher = (url) =>
+    axios
+      .get(url)
+      .then((res) => setTendersData(res.data?.message))
+      .catch((e) => console.log(e.response))
+      .finally(() => console.log(tendersData));
+
+  // Fetch tender id
+  const { data, error } = useSWR(
+    "http://localhost:5000/tender/display",
+    fetcher
+  );
+  if (error) {
+    console.log(error.response?.data);
+  }
+
   return (
     <>
       <div className="logo__container ">
