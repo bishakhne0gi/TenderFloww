@@ -29,7 +29,8 @@ exports.createNewTableTenders = `CREATE TABLE IF NOT EXISTS tenders (
     biddingLength INT NOT NULL,
     startPrice INT NOT NULL, 
     currentMinDemand INT,
-    winner_email VARCHAR(128)
+    winner_email VARCHAR(128),
+    isSettled BOOLEAN default false
 );`;
 
 // Insert Tender's data
@@ -39,27 +40,32 @@ exports.insertTendersData = `INSERT INTO tenders (_title, tender_id, _ipfsHash, 
 exports.displayAllTendersData = `SELECT * FROM tenders`;
 
 // Display a single tender's data
-exports.displayOneTenderData = `SELECT * FROM tenders WHERE tender_id = ? ;`
+exports.displayOneTenderData = `SELECT * FROM tenders WHERE tender_id = ? ;`;
 
 // Create New Active and Past bidding data
 exports.createBiddingTable = `CREATE TABLE IF NOT EXISTS placedBid (
+    placedBid_id VARCHAR(128) PRIMARY KEY,
     tender_id VARCHAR(128) NOT NULL REFERENCES tenders(tender_id),
     email VARCHAR(128) NOT NULL REFERENCES bidders(email),
     biddingAmount INT NOT NULL
-   
-);`
+);`;
 
 // CONSTRAINT unique_bid UNIQUE (tender_id, email)
 
 // Place a new bid
-exports.placeBid = `INSERT INTO placedBid(tender_id, email, biddingAmount) VALUES (?, ?, ?); `;
+exports.placeBid = `INSERT INTO placedBid (placedBid_id, tender_id, email, biddingAmount) VALUES (?, ?, ?, ?); `;
 
 // Update Winner Email if Bidding amount is less than the current winner
-exports.updateWinner = `UPDATE tenders SET winner_email = ?, currentMinDemand = ? WHERE tender_id = ?;`
+exports.updateWinner = `UPDATE tenders SET winner_email = ?, currentMinDemand = ? WHERE tender_id = ?;`;
 
 // Fetch experience of the current winner
-exports.fetchExpWinner = `SELECT exp FROM bidders WHERE email=(SELECT winner_email FROM tenders WHERE email = ? );`
+exports.fetchExpAndMailWinner = `SELECT exp, email FROM bidders WHERE email=(SELECT winner_email FROM tenders WHERE tender_id = ? );`;
 
+// Update Winners Experience
+exports.updateWinnerExperience = `UPDATE bidders SET exp = ? WHERE email = ?`;
+
+// Settle Bid
+exports.settleTender = `UPDATE tenders SET isSettled = true WHERE tender_id = ?`;
 
 // Update Bidder's profile image
 exports.updateBiddersProfileImage = `UPDATE bidders SET photo = ? WHERE email = ?;`;
