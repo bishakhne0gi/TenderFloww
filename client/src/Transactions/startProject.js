@@ -1,5 +1,4 @@
 import * as fcl from "@onflow/fcl";
-import * as t from "@onflow/types";
 
 export const CreateTenderInFlow = async (
   _ipfsHash,
