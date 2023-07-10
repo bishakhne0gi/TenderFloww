@@ -50,7 +50,7 @@ transaction(_ipfsHash: String,_title:String,_description:String,_minimumExp: UIn
 
 }  
 `,
-    args: (arg, t) => [
+    args: (arg) => [
       arg(_ipfsHash, t.String),
       arg(_title, t.String),
       arg(_description, t.String),
