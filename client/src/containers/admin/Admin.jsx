@@ -34,6 +34,7 @@ const Admin = () => {
     fetcher
   );
   if (error) {
+    console.log(error.response?.data);
   }
 
   return (

@@ -51,7 +51,7 @@ router.post("/signup", validateEmail, async (request, response) => {
         (error, rows) => {
           if (error) {
             if (error.code === "ER_DUP_ENTRY") {
-              response.status(400).json({ message: "data already exists" });
+              response.status(400).json({ message: "user already exists" });
               return;
             }
             response.status(500).json({ message: error });
@@ -88,6 +88,11 @@ router.post("/login", validateEmail, async (request, response) => {
     db.query(loginBidders, [email], async (error, result) => {
       if (error) {
         response.status(500).json({ message: error });
+        return;
+      }
+
+      if(result.length === 0) {
+        response.status(400).json({ message: "no bidder found with this email" });
         return;
       }
 

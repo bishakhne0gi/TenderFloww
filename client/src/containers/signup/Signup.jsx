@@ -45,10 +45,15 @@ const Signup = () => {
         signupState,
         axiosConfig
       );
-      navigate("/projects");
+
+      if (!data) {
+        console.log("Something went wrong");
+        return;
+      }
       console.log(data);
+      goTo__Login();
     } catch (e) {
-      console.log(e);
+      console.log(e.response?.data);
     }
   };
 

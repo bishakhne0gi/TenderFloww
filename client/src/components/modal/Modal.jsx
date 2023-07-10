@@ -29,46 +29,44 @@ const Modal = ({ setOpenModal }) => {
     },
   };
 
-  // const fetcher = (url) =>
-  //   axios
-  //     .get("http://localhost:5000/tender/id")
-  //     .then((res) => handleValueChange("tender_id", res.data.message));
+  const fetcher = (url) =>
+    axios
+      .get("http://localhost:5000/tender/id")
+      .then((res) => handleValueChange("tender_id", res.data.message));
 
-  // // Fetch tender id
-  // const { data, error } = useSWR(
-  //   tenderState.tender_id ? "http://localhost:5000/tender/id" : fetcher,
-  //   null
-  // );
-  // if (error) {
-  //   handleValueChange("tender_id", "error");
-  //   // setOpenModal(false);
-  // }
+  // Fetch tender id
+  const { data, error } = useSWR(
+    tenderState.tender_id ? "http://localhost:5000/tender/id" : fetcher,
+    null
+  );
+  if (error) {
+    handleValueChange("tender_id", "error");
+    // setOpenModal(false);
+  }
 
-  // const createTender = async () => {
-  //   try {
-  //     const { data } = await axios.post(
-  //       "http://localhost:5000/tender/create",
-  //       tenderState,
-  //       axiosConfig
-  //     );
-  //     console.log(data.message);
-  //   } catch (e) {
-  //     console.log(e);
-  //   } finally {
-  //     setOpenModal(false);
-  //   }
-  // };
+  // const handleCreateTender = async () => {
+  //   await CreateTenderInFlow(
+  //     tenderState._ipfsHash,
+  //     tenderState._title,
+  //     tenderState._description,
+  //     tenderState._minimumExp,
+  //     tenderState._exp,
+  //     tenderState.biddingLength,
+  //     tenderState.startPrice
+  //   );
+  const createTender = async () => {
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5000/tender/create",
+        tenderState,
+        axiosConfig
+      );
 
-  const handleCreateTender = async () => {
-    await CreateTenderInFlow(
-      tenderState._ipfsHash,
-      tenderState._title,
-      tenderState._description,
-      tenderState._minimumExp,
-      tenderState._exp,
-      tenderState.biddingLength,
-      tenderState.startPrice
-    );
+      console.log(data.message);
+      setOpenModal(false);
+    } catch (e) {
+      console.log(e.response?.data);
+    }
   };
 
   return (
@@ -88,6 +86,7 @@ const Modal = ({ setOpenModal }) => {
                   onChange={(e) =>
                     handleValueChange("tender_id", e.target.value)
                   }
+                  readOnly
                 ></input>
               </div>
 
@@ -180,8 +179,8 @@ const Modal = ({ setOpenModal }) => {
           <button
             className="admin__submit"
             onClick={() => {
-              //createTender();
-              handleCreateTender();
+              createTender();
+              //handleCreateTender();
             }}
           >
             Submit

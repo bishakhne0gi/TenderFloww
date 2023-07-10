@@ -46,10 +46,10 @@ const Login = () => {
         axiosConfig
       );
       
-      console.log(data);
+      console.log(data.data);
       goTo__Projects();
     } catch (err) {
-      console.log(err);
+      console.log(err.response?.data);
     }
   };
 
