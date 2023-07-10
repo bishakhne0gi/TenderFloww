@@ -12,7 +12,7 @@ const Tender = ({ data }) => {
             </div>
 
             <div className="id_list">
-              <div className="id_key">Minimum Experience required</div>
+              <div className="id_key">Min. Exp. required</div>
               <span className="id_val"> {data?._minimumExp}</span>
             </div>
           </div>
@@ -51,8 +51,10 @@ const Tender = ({ data }) => {
         </div>
 
         <div className="tender_right">
-          description
-          <div className="tender_right_body">{data?._description}</div>
+          Description
+          <div className="tender_right_body section__padding">
+            {data?._description}
+          </div>
         </div>
       </div>
     </>

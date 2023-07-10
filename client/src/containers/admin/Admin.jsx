@@ -61,6 +61,7 @@ const Admin = () => {
                 className="admin__get_started"
                 onClick={() => {
                   setModalOpen(true);
+                  console.log("ok");
                 }}
               >
                 Create Tender

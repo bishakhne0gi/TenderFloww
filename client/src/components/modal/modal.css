@@ -38,10 +38,10 @@
     right: 0;
 
     /* min-width: auto; */
-    width: 900px;
+    width: 1000px;
     height: 400px;
     padding: 2rem;
-    border-radius: 30px;
+    border-radius: 10px;
     background: #5761F2;
     box-shadow: 9px 4px 24px 0px #1E1E1E;
 
@@ -51,10 +51,16 @@
 }
 
 
+input {
+    font-family: Epilogue;
+    font-size: 14px;
+}
+
 
 .admin__tender_inputs {
     display: flex;
     flex-direction: row;
+    font-family: Epilogue;
 }
 
 .admin__tender_inputs_left {
@@ -63,17 +69,19 @@
     flex-direction: column;
     margin-right: 1rem;
     justify-content: space-around;
+    font-family: Epilogue;
 }
 
 .admin__tender_inputs_right {
     display: flex;
     flex-basis: 50%;
     margin-left: 1rem;
+
 }
 
 .admin__tender_inputs_right_description textarea {
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: 10px;
     font-family: Epilogue;
     width: 25rem;
     height: 13rem;
@@ -95,7 +103,7 @@
 
 
 .tender_id {
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     padding: 1rem;
     width: 5rem;
@@ -103,33 +111,40 @@
 }
 
 .tender_experience {
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     padding: 1rem;
     width: 9rem;
+    margin-left: 5px;
 
 }
 
+.tender_experience_file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+}
+
 .tender_title {
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     padding: 1rem;
-    width: 25rem;
+    width: 28rem;
 
 }
 
 .tender_dates {
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     padding: 1rem;
-    width: 4rem;
-    margin-left: 10px;
-    /* height: 3rem; */
 
 }
 
 .admin__submit {
-    border-radius: 30px;
+    border-radius: 10px;
     font-family: Epilogue;
     background-color: #2a2b32;
     color: white;

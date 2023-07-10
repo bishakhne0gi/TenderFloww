@@ -2,7 +2,8 @@
     min-height: 40vh;
     min-width: 60vw;
     background-color: antiquewhite;
-    border-radius: 30px;
+
+    border-radius: 10px;
     backdrop-filter: blur(60px);
     background: linear-gradient(136deg, rgba(238, 238, 238, 0.50) 0%, rgba(87, 97, 242, 0.50) 89.58%);
     filter: blur(0px);
@@ -27,9 +28,13 @@
 }
 
 .tender_right_body {
+    margin-top: 1rem;
     height: 20rem;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 10px;
+    color: var(--color-boxShadow);
+
+    
 }
 
 .id_list {
@@ -38,12 +43,12 @@
 }
 
 .id_val {
-    background-color: aqua;
+    background-color: var(--color-boxShadow);
     padding: 20px 30px;
     display: flex;
     margin-left: 1rem;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 10px;
 
 }
 
@@ -51,39 +56,42 @@
 .title_list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .title_val {
-    background-color: aqua;
+    background-color: var(--color-boxShadow);
     padding: 20px 30px;
     display: flex;
     margin-left: 1rem;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 10px;
+    width: 10rem;
 
 }
 
 .date_list {
     display: flex;
-    align-items: center;
+    
     flex-direction: column;
 }
 
 .date_val {
-    background-color: aqua;
+    background-color: var(--color-boxShadow);
     padding: 20px 30px;
     display: flex;
-    margin-left: 1rem;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 10px;
 
 }
-
+.date_key
+{
+    margin-bottom: 1rem;
+}
 .third_list {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .first_list {
