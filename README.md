@@ -7,9 +7,8 @@
 
 ## Decentralized auction for getting tenders
 
-📹 <b><a align="center" href="https://www.youtube.com/watch?v=AWZpPUwqZ2s">Watch Demo Video</a></b><br/>
+📹 <b><a align="center" href="https://www.youtube.com/watch?v=iBkmwWALsMI">Watch Demo Video</a></b><br/>
 📺
-<b><a align="center" href="or-jurm-nahi-b.us">Live</a></b>
 
 </div>
 <div align="center">
@@ -21,14 +20,13 @@
 <p align="center">
   Use this readme to get started with this project
   <br />
-  <a href="https://github.com/arnab2001/Ledged"><strong>Docs »</strong></a>
   <br />
   <br />
   <a href="#">Blog</a>
   ·
-  <a href="https://github.com/arnab2001/ledged/issues">Report Issues</a>
+  <a href="https://github.com/bishakhne0gi/TenderFloww/issues">Report Issues</a>
   ·
-  <a href="https://github.com/arnab2001/ledged/issues">Request Feature</a>
+  <a href="https://github.com/bishakhne0gi/TenderFloww/issues">Request Feature</a>
 </p>
 
 <details>
@@ -90,15 +88,16 @@ Blockchain (one of the ways to implement decentralization) steps into the pictur
 - On the New Ledger page, users can create their **custom fields and data** and upload **files**.
 - On the admin panel government can create new bids and assign its metadata, which will be listed on the site
 - Admin can select the duration of the bid and upon end of Auction, the tender will be automatically awarded to the winner
-- Insufficient quota in our cloud account prevented us from creating a VPC network in GCP, causing problem in establishing a seamless connection between the Cloud SQL and VM instance.
-- Faced timeout errors with the Google Cloud Auth proxy, impacting the authentication process and causing disruptions in the project workflow.
-- Faces issue during private IP exposure and adjusting firewall settings were necessary steps to establish a successful connection between the two cloud services.
+
 
 ### 💀 Challenges we ran into
 
 - Since blockchain is a fairly new technology, we faced difficulties in finding solutions for bugs due to a smaller community.
 - Cadence was pretty hard for us to learn and implement on that large scale, Resources was scarce too
 - Flow Testnet was crashing sometimes
+- Insufficient quota in our cloud account prevented us from creating a VPC network in GCP, causing problem in establishing a seamless connection between the Cloud SQL and VM instance.
+- Faced timeout errors with the Google Cloud Auth proxy, impacting the authentication process and causing disruptions in the project workflow.
+- Faces issue during private IP exposure and adjusting firewall settings were necessary steps to establish a successful connection between the two cloud services.
 
 ### 🔮 What's Next For Our Project
 
@@ -140,13 +139,6 @@ Blockchain (one of the ways to implement decentralization) steps into the pictur
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
 <img src="https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png" height="40px"> GCP - Cloud service provider
 </div>
-
-<br/>
-<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-left: 3rem">
-<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="30px" width="30px" > Cloud SQL - Relational Database Service
-<img src="https://w7.pngwing.com/pngs/362/50/png-transparent-google-cloud-platform-google-compute-engine-kubernetes-docker-container-blue-angle-service.png" height="30px" width="30px"> Compute Engine - Virtual Machine
-</div>
-
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
