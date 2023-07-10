@@ -33,6 +33,7 @@ const Admin = () => {
     "http://localhost:5000/tender/display",
     fetcher
   );
+
   if (error) {
     console.log(error.response?.data);
   }
@@ -74,7 +75,7 @@ const Admin = () => {
               tendersData?.map((tender, key) => {
                 return (
                   <>
-                    <Tender data={tender} key={key} />
+                    <Tender datas={tender} key={key} />
                   </>
                 );
               })
