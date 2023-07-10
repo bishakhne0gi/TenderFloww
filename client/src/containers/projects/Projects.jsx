@@ -12,7 +12,8 @@ import Logo from "../../assets/logo (2).png";
 import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
-  const [myBool, setmyBool] = useState(true);
+  const [isPastListvisible, setisPastListvisible] = useState(false);
+  const [isActiveListvisible, setisActiveListvisible] = useState(true);
 
   const change = () => {
     setmyBool(!myBool);
@@ -80,12 +81,24 @@ const Projects = () => {
 
           <div className="projects__switch_btns">
             <div className="projects__active_projects_header ">
-              <button className="projects__header_btn" onClick={change}>
+              <button
+                className="projects__header_btn"
+                onClick={() => {
+                  setisActiveListvisible(true);
+                  setisPastListvisible(false);
+                }}
+              >
                 Active Projects
               </button>
             </div>
             <div className="projects__active_projects_header ">
-              <button className="projects__header_btn1" onClick={change}>
+              <button
+                className="projects__header_btn1"
+                onClick={() => {
+                  setisActiveListvisible(false);
+                  setisPastListvisible(true);
+                }}
+              >
                 Past Projects
               </button>
             </div>
@@ -93,11 +106,11 @@ const Projects = () => {
 
           <div className="projects__body section__margin">
             <div className="project__body_header_active">
-              {myBool ? <ActiveHeader /> : <PastHeader />}
+              {isActiveListvisible ? <ActiveHeader /> : <PastHeader />}
             </div>
 
             <div className="project__body_list">
-              {myBool ? (
+              {isActiveListvisible ? (
                 <>
                   <ListActive />
                   <ListActive />

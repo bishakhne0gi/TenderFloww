@@ -44,7 +44,7 @@ const Modal = ({ setOpenModal }) => {
     null
   );
   if (error) {
-    handleValueChange("tender_id", "error");
+    handleValueChange("tender_id", "ERROR");
     // setOpenModal(false);
   }
 
@@ -58,7 +58,6 @@ const Modal = ({ setOpenModal }) => {
       tenderState.biddingLength,
       tenderState.startPrice
     );
-
     const createTender = async () => {
       try {
         const { data } = await axios.post(
@@ -94,7 +93,7 @@ const Modal = ({ setOpenModal }) => {
                   <input
                     className="tender_id"
                     type="text"
-                    placeholder="tender_id"
+                    placeholder="Tender ID"
                     value={tenderState.tender_id}
                     onChange={(e) => {
                       handleValueChange("tender_id", e.target.value);
@@ -104,12 +103,10 @@ const Modal = ({ setOpenModal }) => {
                 </div>
 
                 <div className="tender">
-                  {/**IPFS THING-------------------------------------- */}
-
                   <input
                     className="tender_experience"
                     type="text"
-                    placeholder="Tender Title "
+                    placeholder="Tender Title"
                     value={tenderState._title}
                     onChange={(e) =>
                       handleValueChange("_title", e.target.value)
@@ -120,7 +117,7 @@ const Modal = ({ setOpenModal }) => {
                   <input
                     className="tender_experience"
                     type="text"
-                    placeholder="Minimum Experience Required"
+                    placeholder="Min. Exp. Required"
                     value={tenderState._minimumExp}
                     onChange={(e) =>
                       handleValueChange("_minimumExp", e.target.value)
@@ -144,6 +141,7 @@ const Modal = ({ setOpenModal }) => {
                   <input
                     className="tender_dates"
                     type="text"
+                    name="opening"
                     placeholder="Bidding Duration"
                     value={tenderState.biddingLength}
                     onChange={(e) =>
@@ -156,6 +154,7 @@ const Modal = ({ setOpenModal }) => {
                   <input
                     className="tender_dates"
                     type="text"
+                    name="startPrice"
                     placeholder="Starting Bid Price"
                     value={tenderState.startPrice}
                     onChange={(e) =>
@@ -164,7 +163,6 @@ const Modal = ({ setOpenModal }) => {
                   />
                 </div>
               </div>
-
               <div className="tender">
                 {/**IPFS THING-------------------------------------- */}
                 {tenderState._ipfsHash ? (
@@ -189,6 +187,7 @@ const Modal = ({ setOpenModal }) => {
                     )}
                   </>
                 )}
+                {/**IPFS THING-------------------------------------- */}
               </div>
             </div>
 
@@ -212,8 +211,8 @@ const Modal = ({ setOpenModal }) => {
             <button
               className="admin__submit"
               onClick={() => {
-                //  createTender();
-                handleCreateTender();
+                createTender();
+                //handleCreateTender();
               }}
             >
               Submit

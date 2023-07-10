@@ -1,5 +1,4 @@
 import * as fcl from "@onflow/fcl";
-import * as t from "@onflow/types";
 
 export const CreateTenderInFlow = async (
   _ipfsHash,
@@ -50,7 +49,7 @@ transaction(_ipfsHash: String,_title:String,_description:String,_minimumExp: UIn
 
 }  
 `,
-    args: (arg) => [
+    args: (arg, t) => [
       arg(_ipfsHash, t.String),
       arg(_title, t.String),
       arg(_description, t.String),

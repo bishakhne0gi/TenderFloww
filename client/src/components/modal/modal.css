@@ -57,10 +57,6 @@ input {
 }
 
 
-/* .tender {
-    background-color: white;
-} */
-
 .admin__tender_inputs {
     display: flex;
     flex-direction: row;
