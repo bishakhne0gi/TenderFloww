@@ -108,73 +108,73 @@ Blockchain (one of the ways to implement decentralization) steps into the pictur
 ## 💻 Built With
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="30px" width="30px">React - JavaScript library for building UI
+<img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="30px" width="30px"> React - JavaScript library for building UI
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height="30px" width="30px">Vite - Frontend Build tool
+<img src="https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height="30px" width="30px"> Vite - Frontend Build tool
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px">Flow - Main decentralized, public layer blockchain
+<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> Flow - Main decentralized, public layer blockchain
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px">Cadence - Smart contract programming language
+<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> Cadence - Smart contract programming language
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height="40px" width="40px">Filecoin - Decentralized storage network
+<img src="https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height="40px" width="40px"> Filecoin - Decentralized storage network
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png" height="40px">GCP - Cloud service provider
+<img src="https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png" height="40px"> GCP - Cloud service provider
 </div>
 
 <br/>
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-left: 3rem">
-<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="30px" width="30px" >Cloud SQL - Relational Database Service
-<img src="https://w7.pngwing.com/pngs/362/50/png-transparent-google-cloud-platform-google-compute-engine-kubernetes-docker-container-blue-angle-service.png" height="30px" width="30px">Compute Engine - Virtual Machine
+<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="30px" width="30px" > Cloud SQL - Relational Database Service
+<img src="https://w7.pngwing.com/pngs/362/50/png-transparent-google-cloud-platform-google-compute-engine-kubernetes-docker-container-blue-angle-service.png" height="30px" width="30px"> Compute Engine - Virtual Machine
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="40px" width="60px">Node.js - as the backend runtime
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="40px" width="60px"> Node.js - as the backend runtime
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" height="40px" width="50px">Express.js - as our backend framework
+<img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" height="40px" width="50px"> Express.js - as our backend framework
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" height="50px" width="50px">Docker - for containerization
+<img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" height="50px" width="50px"> Docker - for containerization
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height="40px" width="40px">Postman for documenting our APIs
+<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height="40px" width="40px"> Postman for documenting our APIs
 </div>
 
 <br/>
 
 <div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/.xyz_logo.svg/1280px-.xyz_logo.svg.png" height="40px" width="60px">.XYZ for our domain registry
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/.xyz_logo.svg/1280px-.xyz_logo.svg.png" height="40px" width="60px"> .XYZ for our domain registry
 </div>
 
 ## Getting Started
