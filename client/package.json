@@ -11,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@onflow/fcl": "^1.4.1",
+    "@onflow/types": "^1.1.0",
     "axios": "^1.4.0",
     "email-validator": "^2.0.4",
     "react": "^18.2.0",

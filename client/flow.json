@@ -1,0 +1,26 @@
+{
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"my-testnet-account": {
+			"address": "0xea0627a8b29d7901",
+			"key": "76059f5ea73873b0d7d3ffa3a18578478bf3b7edc7541fac5061d76477f0f031"
+		}
+	},
+	"contracts":{
+        "FungibleToken":"./src/contracts/FungibleToken.cdc",
+        "NonFungibleToken":"./src/contracts/NonfungibleToken.cdc",
+        "Tender":"./src/contracts/Tender.cdc",
+        "Flowtoken":"./src/contracts/FlowToken.cdc",
+        "Biddingplatform":"./src/contracts/BiddingPlatform.cdc"
+     },
+     "deployments": {
+         "testnet": {
+           "my-testnet-account": ["FungibleToken","NonFungibleToken","Tender","Flowtoken","Biddingplatform"]
+         }
+     }
+}

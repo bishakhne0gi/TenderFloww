@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import "./modal.css";
 import axios from "axios";
 import useSWR from "swr";
+import { CreateTenderInFlow } from "../../Transactions/startProject";
 
 const Modal = ({ setOpenModal }) => {
   const [tenderState, setTenderState] = useState({
-    name: "",
     tender_id: "",
-    description: "",
-    criteria: "",
-    opening_date: "",
-    closing_date: "",
+    _ipfsHash: "",
+    _title: "",
+    _description: "",
+    _minimumExp: "",
+    _exp: "",
+    biddingLength: "",
+    startPrice: "",
   });
 
   const handleValueChange = (fieldName, value) => {
@@ -26,34 +29,46 @@ const Modal = ({ setOpenModal }) => {
     },
   };
 
-  const fetcher = (url) =>
-    axios
-      .get("http://localhost:5000/tender/id")
-      .then((res) => handleValueChange("tender_id", res.data.message));
+  // const fetcher = (url) =>
+  //   axios
+  //     .get("http://localhost:5000/tender/id")
+  //     .then((res) => handleValueChange("tender_id", res.data.message));
 
-  // Fetch tender id
-  const { data, error } = useSWR(
-    tenderState.tender_id ? "http://localhost:5000/tender/id" : fetcher,
-    null
-  );
-  if (error) {
-    handleValueChange("tender_id", "error");
-    // setOpenModal(false);
-  }
+  // // Fetch tender id
+  // const { data, error } = useSWR(
+  //   tenderState.tender_id ? "http://localhost:5000/tender/id" : fetcher,
+  //   null
+  // );
+  // if (error) {
+  //   handleValueChange("tender_id", "error");
+  //   // setOpenModal(false);
+  // }
 
-  const createTender = async () => {
-    try {
-      const { data } = await axios.post(
-        "http://localhost:5000/tender/create",
-        tenderState,
-        axiosConfig
-      );
-      console.log(data.message);
-    } catch (e) {
-      console.log(e);
-    } finally {
-      setOpenModal(false);
-    }
+  // const createTender = async () => {
+  //   try {
+  //     const { data } = await axios.post(
+  //       "http://localhost:5000/tender/create",
+  //       tenderState,
+  //       axiosConfig
+  //     );
+  //     console.log(data.message);
+  //   } catch (e) {
+  //     console.log(e);
+  //   } finally {
+  //     setOpenModal(false);
+  //   }
+  // };
+
+  const handleCreateTender = async () => {
+    await CreateTenderInFlow(
+      tenderState._ipfsHash,
+      tenderState._title,
+      tenderState._description,
+      tenderState._minimumExp,
+      tenderState._exp,
+      tenderState.biddingLength,
+      tenderState.startPrice
+    );
   };
 
   return (
@@ -80,10 +95,28 @@ const Modal = ({ setOpenModal }) => {
                 <input
                   className="tender_experience"
                   type="text"
-                  placeholder="Eligibility (In Flow)"
-                  value={tenderState.criteria}
+                  placeholder="IPFS hash"
+                  value={tenderState._ipfsHash}
                   onChange={(e) =>
-                    handleValueChange("criteria", e.target.value)
+                    handleValueChange("_ipfsHash", e.target.value)
+                  }
+                ></input>
+                <input
+                  className="tender_experience"
+                  type="text"
+                  placeholder="title "
+                  value={tenderState._title}
+                  onChange={(e) => handleValueChange("_title", e.target.value)}
+                ></input>
+              </div>
+              <div className="tender">
+                <input
+                  className="tender_experience"
+                  type="text"
+                  placeholder="Minimum Experience Required"
+                  value={tenderState._minimumExp}
+                  onChange={(e) =>
+                    handleValueChange("_minimumExp", e.target.value)
                   }
                 ></input>
               </div>
@@ -93,35 +126,34 @@ const Modal = ({ setOpenModal }) => {
               <input
                 className="tender_title"
                 type="text"
-                placeholder="Title"
-                value={tenderState.name}
-                onChange={(e) => handleValueChange("name", e.target.value)}
+                placeholder="Exprience Provided"
+                value={tenderState._exp}
+                onChange={(e) => handleValueChange("_exp", e.target.value)}
               ></input>
             </div>
 
             <div className="left_third">
               <div className="left_third_dates">
-                Opening Date
+                Bidding Length
                 <input
                   className="tender_dates"
-                  type="date"
+                  type="text"
                   name="opening"
-                  value={tenderState.opening_date}
+                  value={tenderState.biddingLength}
                   onChange={(e) =>
-                    handleValueChange("opening_date", e.target.value)
+                    handleValueChange("biddingLength", e.target.value)
                   }
                 />
               </div>
 
               <div className="left_third_dates">
-                Closing Date
                 <input
                   className="tender_dates"
-                  type="date"
-                  name="closing"
-                  value={tenderState.closing_date}
+                  type="text"
+                  name="startPrice"
+                  value={tenderState.startPrice}
                   onChange={(e) =>
-                    handleValueChange("closing_date", e.target.value)
+                    handleValueChange("startPrice", e.target.value)
                   }
                 />
               </div>
@@ -135,9 +167,9 @@ const Modal = ({ setOpenModal }) => {
                 cols="20"
                 name="description"
                 placeholder="Description"
-                value={tenderState.description}
+                value={tenderState._description}
                 onChange={(e) =>
-                  handleValueChange("description", e.target.value)
+                  handleValueChange("_description", e.target.value)
                 }
               ></textarea>
             </div>
@@ -148,7 +180,8 @@ const Modal = ({ setOpenModal }) => {
           <button
             className="admin__submit"
             onClick={() => {
-              createTender();
+              //createTender();
+              handleCreateTender();
             }}
           >
             Submit
