@@ -3,8 +3,11 @@ import "./modal.css";
 import axios from "axios";
 import useSWR from "swr";
 import { CreateTenderInFlow } from "../../Transactions/startProject";
+import { client } from "./util";
 
 const Modal = ({ setOpenModal }) => {
+  const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState();
   const [tenderState, setTenderState] = useState({
     tender_id: "",
     _ipfsHash: "",
@@ -14,6 +17,7 @@ const Modal = ({ setOpenModal }) => {
     _exp: "",
     biddingLength: "",
     startPrice: "",
+    opening_date: new Date().toISOString().slice(0, 19).replace("T", " "),
   });
 
   const handleValueChange = (fieldName, value) => {
@@ -69,6 +73,14 @@ const Modal = ({ setOpenModal }) => {
     }
   };
 
+  const getIPFSHash = async (file) => {
+    setLoading(true);
+    setFile(file);
+    const cid = await client.put(file);
+    handleValueChange("_ipfsHash", cid);
+    setLoading(false);
+  };
+
   return (
     <>
       <div className="modal__background"></div>
@@ -81,25 +93,41 @@ const Modal = ({ setOpenModal }) => {
                 <input
                   className="tender_id"
                   type="text"
-                  placeholder="ID"
+                  placeholder="tender_id"
                   value={tenderState.tender_id}
-                  onChange={(e) =>
-                    handleValueChange("tender_id", e.target.value)
-                  }
+                  onChange={(e) => {
+                    handleValueChange("tender_id", e.target.value);
+                  }}
                   readOnly
                 ></input>
               </div>
 
               <div className="tender">
-                <input
-                  className="tender_experience"
-                  type="text"
-                  placeholder="IPFS hash"
-                  value={tenderState._ipfsHash}
-                  onChange={(e) =>
-                    handleValueChange("_ipfsHash", e.target.value)
-                  }
-                ></input>
+                {/**IPFS THING-------------------------------------- */}
+                {tenderState._ipfsHash ? (
+                  <>{`IPFSHash : ${tenderState._ipfsHash.slice(
+                    0,
+                    4
+                  )}...${tenderState._ipfsHash.slice(
+                    tenderState._ipfsHash.length - 4,
+                    tenderState._ipfsHash.length
+                  )} `}</>
+                ) : (
+                  <>
+                    {!loading ? (
+                      <input
+                        className="tender_experience"
+                        type="file"
+                        placeholder="IPFS hash"
+                        onChange={(e) => getIPFSHash(e.target.files)}
+                      ></input>
+                    ) : (
+                      <>"loading..."</>
+                    )}
+                  </>
+                )}
+                {/**IPFS THING-------------------------------------- */}
+
                 <input
                   className="tender_experience"
                   type="text"

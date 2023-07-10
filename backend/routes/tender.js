@@ -52,16 +52,16 @@ router.post("/tender/create", (request, response) => {
     return;
   }
 
-  const currentDate = new Date();
-  const openingDate = new Date(opening_date);
+  // const currentDate = new Date();
+  // const openingDate = new Date(opening_date);
 
-  // Check Opening & closing date is valid or not
-  if (openingDate < currentDate) {
-    response.status(401).json({
-      message: "the opening date cannot be lesser than the current date",
-    });
-    return;
-  }
+  // // Check Opening & closing date is valid or not
+  // if (openingDate < currentDate) {
+  //   response.status(401).json({
+  //     message: "the opening date cannot be lesser than the current date",
+  //   });
+  //   return;
+  // }
 
   try {
     const db = mysql.createConnection(db_config);
