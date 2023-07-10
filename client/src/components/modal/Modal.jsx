@@ -105,34 +105,11 @@ const Modal = ({ setOpenModal }) => {
 
                 <div className="tender">
                   {/**IPFS THING-------------------------------------- */}
-                  {tenderState._ipfsHash ? (
-                    <>{`IPFSHash : ${tenderState._ipfsHash.slice(
-                      0,
-                      4
-                    )}...${tenderState._ipfsHash.slice(
-                      tenderState._ipfsHash.length - 4,
-                      tenderState._ipfsHash.length
-                    )} `}</>
-                  ) : (
-                    <>
-                      {!loading ? (
-                        <input
-                          className="tender_experience"
-                          type="file"
-                          placeholder="IPFS hash"
-                          onChange={(e) => getIPFSHash(e.target.files)}
-                        ></input>
-                      ) : (
-                        <>"loading..."</>
-                      )}
-                    </>
-                  )}
-                  {/**IPFS THING-------------------------------------- */}
 
                   <input
                     className="tender_experience"
                     type="text"
-                    placeholder="title "
+                    placeholder="Tender Title "
                     value={tenderState._title}
                     onChange={(e) =>
                       handleValueChange("_title", e.target.value)
@@ -156,7 +133,7 @@ const Modal = ({ setOpenModal }) => {
                 <input
                   className="tender_title"
                   type="text"
-                  placeholder="Exprience Provided"
+                  placeholder="Experience Provided"
                   value={tenderState._exp}
                   onChange={(e) => handleValueChange("_exp", e.target.value)}
                 ></input>
@@ -164,11 +141,10 @@ const Modal = ({ setOpenModal }) => {
 
               <div className="left_third">
                 <div className="left_third_dates">
-                  Bidding Length
                   <input
                     className="tender_dates"
                     type="text"
-                    name="opening"
+                    placeholder="Bidding Duration"
                     value={tenderState.biddingLength}
                     onChange={(e) =>
                       handleValueChange("biddingLength", e.target.value)
@@ -180,13 +156,39 @@ const Modal = ({ setOpenModal }) => {
                   <input
                     className="tender_dates"
                     type="text"
-                    name="startPrice"
+                    placeholder="Starting Bid Price"
                     value={tenderState.startPrice}
                     onChange={(e) =>
                       handleValueChange("startPrice", e.target.value)
                     }
                   />
                 </div>
+              </div>
+
+              <div className="tender">
+                {/**IPFS THING-------------------------------------- */}
+                {tenderState._ipfsHash ? (
+                  <>{`IPFSHash : ${tenderState._ipfsHash.slice(
+                    0,
+                    4
+                  )}...${tenderState._ipfsHash.slice(
+                    tenderState._ipfsHash.length - 4,
+                    tenderState._ipfsHash.length
+                  )} `}</>
+                ) : (
+                  <>
+                    {!loading ? (
+                      <input
+                        className="tender_experience_file"
+                        type="file"
+                        placeholder="IPFS hash"
+                        onChange={(e) => getIPFSHash(e.target.files)}
+                      ></input>
+                    ) : (
+                      <>"loading..."</>
+                    )}
+                  </>
+                )}
               </div>
             </div>
 
