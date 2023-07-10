@@ -10,6 +10,8 @@ import {
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import Logo from "../../assets/logo (2).png";
 import { useNavigate } from "react-router-dom";
+import useSWR from "swr";
+import axios from "axios";
 
 const Projects = () => {
   const [myBool, setmyBool] = useState(true);
@@ -43,7 +45,7 @@ const Projects = () => {
     fetcher
   );
   if (error) {
-    console.log(error.response?.data);
+    console.log(error?.data);
   }
 
   return (

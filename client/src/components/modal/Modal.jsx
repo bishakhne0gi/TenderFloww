@@ -44,7 +44,7 @@ const Modal = ({ setOpenModal }) => {
     null
   );
   if (error) {
-    handleValueChange("tender_id", "error");
+    handleValueChange("tender_id", "ERROR");
     // setOpenModal(false);
   }
 
