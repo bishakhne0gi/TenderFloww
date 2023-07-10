@@ -1,34 +1,36 @@
-# Hack For Bengal Season2 - TenderFlow
+## <div div align="center">Hack For Bengal Season 2 - TenderFlow </div>
 
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/bishakhne0gi/TenderFloww">
     <img src="https://github.com/bishakhne0gi/TenderFloww/assets/50258639/d6f8c2b3-9a96-4395-9712-8543771c53b9" alt="Logo" width="120" height="120">
-  
-# TenderFlow
+  </a>
 
-## Decentralised auction for getting tenders
 
-  <b><a align="center" href="https://www.youtube.com/watch?v=AWZpPUwqZ2s">Watch Demo Video</a></b>
-  <br/>
-  <b><a a align="center" href="or-jurm-nahi-b.us">Live</a><b>
+## Decentralized auction for getting tenders
 
-  <p align="center">
-    Use this readme for getting stared with this project
-    <br />
-    <a href="https://github.com/arnab2001/Ledged"><strong>docs »</strong></a>
-    <br />
-    <br />
-    <a href="#"> Blog </a>
-    ·
-    <a href="https://github.com/arnab2001/ledged/issues">Report Issues</a>
-    ·
-    <a href="https://github.com/arnab2001/ledged/issues">Request Feature</a>
-  </p>
+📹 <b><a align="center" href="https://www.youtube.com/watch?v=AWZpPUwqZ2s">Watch Demo Video</a></b><br/>
+📺
+<b><a align="center" href="or-jurm-nahi-b.us">Live</a></b>
 </div>
+<div align="center">
+ 
+  <a align="center" href="https://www.postman.com/winter-moon-325889/workspace/tenderflow-team-bugbyte/overview">Postman public workspace for APIs</a> </br>
+  <a align="center" href="https://youtu.be/tMH9hlLgedE">Video Walkthrough of Cadence Smart Contracts</a>
+  
+</div>
+<p align="center">
+  Use this readme to get started with this project
+  <br />
+  <a href="https://github.com/arnab2001/Ledged"><strong>Docs »</strong></a>
+  <br />
+  <br />
+  <a href="#">Blog</a>
+  ·
+  <a href="https://github.com/arnab2001/ledged/issues">Report Issues</a>
+  ·
+  <a href="https://github.com/arnab2001/ledged/issues">Request Feature</a>
+</p>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -54,93 +56,99 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
-## 🤩🤩About The Project🤩🤩
+## 🤩🤩 About The Project 🤩🤩
 
-![LandingPage](https://github.com/bishakhne0gi/TenderFloww/assets/63441472/cc69c1d7-5adf-4d11-9bc9-be2e8aac563e)
->
 
-### 💭Inspiration
 
-- Currently, Data in centralized systems is at the risk of being easily **tampered/modified** as there is a single entity(central authority) which is controlling them. For example , FIR copies being tampered/deleted or bank information altered by misusers or post morterm reports manipulated , etc.
-- To solve this problem , we came up with a solution using **blockchain**.
-- <H4>Usecase :In law enforcement</H4>
 
-&nbsp;&nbsp;  In the field of law enforcement , it is seen that crucial informations like FIR reports , Post-mortem reports are often **illegally tampered** , by influence or power , to favour a certain side. We can prevent this by using blockchain technology , which is immutable and non-destructable.
+https://github.com/bishakhne0gi/TenderFloww/assets/63441472/1c7e6ef7-1d47-4548-8737-1d9139280971
 
-- <H4>Another Usecase :In banking</H4>
 
-&nbsp;&nbsp; Most of banking and their servers are centeralized. This , however unwillingly , gives them supreme authority over our data, including access to our account balance , cheque details , money transfers , etc. Servers are prone to hacking or other data breach issues , also , the centeralized company might not be very trustworthy with our data. This issue is also valid for businesses of all scale.
+### 💭 Inspiration
 
-&nbsp;&nbsp;&nbsp;&nbsp; **Blockchain (One of the ways to implement decentralization)** steps into the picture to solve our problems.
+- **Tamper-Resistant Data:** In centralized systems, the data is vulnerable to easy tampering and modification since there is a single entity or central authority controlling it. This poses a significant risk to the integrity of the data. By adopting a decentralized approach, we can leverage blockchain technology to ensure that data remains tamper-resistant and immutable.
+- **Transparency in Tendering:** The current process of calling for tenders is often lengthy, manual, and lacks transparency, leaving ample room for corruption. By developing a bidding platform, we aim to bring transparency to the forefront of the tendering process. Through digitalization and automation, we can streamline the process, promote fairness, and minimize opportunities for corruption.
 
-### 💡What problem does the project solve?
+### ⚙️ Use Case: Infrastructure Development
 
-- The project aims to solve the problem of **information manipulation** in public and private sectors.
-- The **DAPP** helps us to create **customizable** ledgers (records) that are stored in **decentralised blockchain** networks.
-- Ledged also allows us to upload files using **FileCoin** IPFS
-- It also enables the user to systematically preview the past ledgers
-- This makes it immune to tampering or manipulation.
+Infrastructure development projects, such as road construction, public transportation systems, or utility network expansion, often involve substantial budgets and require transparent tendering processes. However, the current centralized systems lack transparency and can be prone to corruption. By building a bidding platform for government tenders, we aim to bring transparency and accountability to infrastructure development projects. The platform will enable fair competition among contractors, ensure equal access to tender information, and provide an audit trail of the entire bidding process, minimizing the risk of corruption and favoritism.
 
-- **Transparency** of data is maintained.
+Blockchain (one of the ways to implement decentralization) steps into the picture to solve our problems.
 
-### 🙌Overview
+### 💡 What problem does the project solve?
 
-- In The landing Page, the user will be able to see features of our DAPP and also get started with our ledger
-- After clicking the **get started** button , the login happens using **Metamask** wallet
-- The user is redirected to their **profile page** , where they can view their **past ledgers** or **create new ledgers**
-- At New Ledger page , user can create their **custom fields and data** , and also upload **files**
-- They are also allowed to preview the file in the **preview section** before finally clicking **Deploy**
-- The previously created ledgers can be viewed under Previous Ledgers page.
+- The project addresses the challenge of inefficient and biased tender processes, particularly in the public and government sectors.
+- The DAPP (Decentralized Application) powered by FLOW blockchain provides a transparent and efficient auction system for tendering.
+- By utilizing the power of blockchain technology and NFTs (Non-Fungible Tokens), the project ensures a fair and unbiased distribution of tenders not only based on offering but also experience and qualifications.
+- The use of NFTs as a means of generating and storing agreements guarantees immutability and prevents any manipulation or favoritism.
+- With the implementation of this system, corruption and favoritism are eliminated, creating a level playing field for all participants in the tendering process.
+- By promoting transparency and accountability, the project fosters trust and transparency among stakeholders and ensures that tenders are awarded based on merit and expertise rather than biased decision-making.
+
+### 🙌 Overview
+
+- On the landing page, See the listing of tenders posted by the government.
+- After clicking a specific **tender** participants can participate in an auction bid using the **bidding portal**.
+- After clicking the **Register** button, the user can log in using the **Blockto** wallet.
+- then they can bid on a tender using a flow 
+- Upon the end of the Auction the bidding will be settled and the lowest bidder will be awarded an NFT that signifies the ownership of the tender
+- On the New Ledger page, users can create their **custom fields and data** and upload **files**.
+- On the admin panel government can create new bids and assign its metadata, which will be listed on the site 
+- Admin can select the duration of the bid and upon end of Auction, the tender will be automatically  awarded to the winner
 
 ### 💀 Challenges we ran into
 
-- Since blockchain is fairly new technology , we were finding it difficult to get solutions of out bugs due to smaller community.
-- In the solidity file , i was using a struct of my own , but due to lack of resources , we faced problems initially.
-- A very recent and major update of **Ether JS** made it very confusing , and we had to go through a lot of documentations
+- Since blockchain is a fairly new technology, we faced difficulties in finding solutions for bugs due to a smaller community.
+- Cadence was pretty hard for us to learn and implement on that large scale, Resources was scarce too
+- Flow Testnet was crashing sometimes
+  
 
 ### 🔮 What's Next For Our Project
 
-- Restructuring the view-ledger section for better readibility and better organization
-- Optimization and minor bug fixes
+- Restructuring the view vid and auction section for better readability and organization.
+- Optimization and minor bug fixes.
 
-<p align="right">(<a href="#read<img width="191" alt="an_logo_light_temp" src="https://user-images.githubusercontent.com/63441472/190889937-afb28215-5bb5-4115-83d2-f7afb73ef8f8.png">
-<me-top">back to top</a>)</p>
+## 💻 Built With
 
-### 💻 Built With
+- <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="30px" width="30px"> **React** - for building the frontend UI
+- <img src="https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height="30px" width="30px"> **Vite** - as a module bundler instead of webpack
+- <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> **Flow** - as the main blockchain
+- <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> **Cadence** - for writing smart contracts
+- <img src="https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height="40px" width="40px"> **Filecoin** - as IPFS
+- <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" height="40px" width="140px"> **GCP** - as our cloud service provider
+- <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="40px" width="60px"> **Node.js** - as the backend runtime
+- <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" height="40px" width="50px"> **Express.js** - as our backend framework
+- <img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="50px" width="40px"> **GCP Cloud SQL** - as our off-chain database
+- <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" height="50px" width="50px"> **Docker** - for containerization
+- <img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height="40px" width="40px">  **Postman** for documenting our APIs
+- .XYZ for our domain registry
 
-- <img src = "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" style="margin-top: 40px" height=30px width=30px > **React** - for building the frontend UI <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height=30px width=30px>**Vite** - as Module bundler instead of webpack <br>
-- <img src = "https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height=40px width=40px > **Flow**- as main blockchain <br>
-- <img src = "https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height=40px width=40px> **Cadance**- for writing smart contract <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height=40px width=40px> **Filecoin**- as IPFS<br>
-- <img src = "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" height=40px width=140px > **GCP** - as our cloud service provider <br>
-- <img src = "https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height=40px width=40px> -  Postman for Documenting our APIs <br>
-- GoDaddy for our domain registry
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
-For setting up your project locally, follow these simple steps.
+To set up your project locally, follow these simple steps.
 
 ### Prerequisites
 
-You must have NPM(Node Package Manager) installed  in your system , If you dont we got you covered  
+You must have NPM (Node Package Manager), Flow CLI, and Docker installed in your system. If you don't, we've got you covered.
 
-  [Install NPM](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+- [Install NPM](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+- [Install Flow CLI](https://developers.flow.com/tooling/flow-cli/install)
+- [Install Docker](https://docs.docker.com/engine/install/)
 
 ### Installation
 
-_How to setup this project_
+Follow the steps below to set up the project:
 
 1. Clone the repo
 
    ```sh
    git clone https://github.com/bishakhne0gi/TenderFloww.git
+   ```
+
+2. Configure Client
+
+   ```sh
+   cd client
+   npm install
    ```
 
 3. Install all the NPM packages
@@ -149,36 +157,40 @@ _How to setup this project_
    npm install
    ```
 
-4. configure `.env` and add
+4. Configure `.env` file with the required settings
 
    ```env
    Coming Soon
    ```
 
-5. Install and Configure Flow CLI , create and add account 
+5. Initialize Flow: Navigate to the client folder
+
+   ```sh
+   Flow init
+   ```
+
+6. Install and Configure Flow CLI, create and add an account so that we can deploy contracts on the testnet
 
    ```sh
    flow accounts create \
-    --key a69c6986e846ba6d0....1397f5904cd319c3e01e96375d5777f1a47010 \
+    --key <your Public key from flow Cli>\
     --host access.devnet.nodes.onflow.org:9000 \
     --signer my-testnet-account
     ```
 
-   https://developers.flow.com/tutorials/testnet-deployment
+   For more information, refer to the [testnet deployment guide](https://developers.flow.com/tutorials/testnet-deployment).
 
-6. Then Deploy project on your testnet, use the following command
+7. Deploy the project on your testnet using the following command
 
-  ```sh
-  flow project deploy
-  ```
-
-7. run
-
-  ```sh
-  npm start dev
+   ```sh
+   flow project deploy
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+8. Run the project
+
+   ```sh
+   npm start dev
+   ```
 
 <!-- USAGE EXAMPLES 
 ## Usage
@@ -187,59 +199,42 @@ _How to setup this project_
 </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- ROADMAP -->
 ## Roadmap
 
-&nbsp;
-
-- [x] landing page
-- [x] Login/signUp component
-- [x] place bids
+- [x] Landing page
+- [x] Login/SignUp component
+- [x] Place bids
 - [x] Admin panel
 - [x] Adding smart contract
-- [x] building backend
-- [x] Intigrating both samrt contract and  
-- [x] Intigrate filecoin
+- [x] Building backend
+- [x] Integrating both smart contract and backend
+- [x] Integrate Filecoin
 
-See the [open issues](https://github.com/arnab2001/Ledged/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/arnab2001/Ledged/issues) for a full list of proposed features and known issues.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "improvement".
-Don't forget to star this project!!
+If you have a suggestion that would make this project better, please fork the repo and create a pull request. You can also simply open an issue with the tag "improvement". Don't forget to star this project!
 
+To contribute:
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/Feature1`)
 3. Commit your Changes (`git commit -m 'Add Feature 1'`)
 4. Push to the Branch (`git push origin feature/Feature1`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License
+Distributed under the MIT License.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
 ## Contributors
 
-<br>
-<div>
 <h1 align="center">
- <b>Made with ❤️ by team Bugbyte
-<h1>
+ <b>Made with ❤️ by team Bugbyte</h1>
+</h1>
+<div align="center">
 <a href="https://github.com/bishakhne0gi/TenderFloww/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=bishakhne0gi/TenderFloww&&max=817" />
+  <img src="https://contrib.rocks/image?repo=bishakhne0gi/TenderFloww" />
 </a>
 </div>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
