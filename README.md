@@ -282,6 +282,6 @@ Distributed under the MIT License.
 </h1>
 <div align="center">
 <a href="https://github.com/bishakhne0gi/TenderFloww/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=bishakhne0gi/TenderFloww" />
+  <img src="https://contrib.rocks/image?repo=Irshit033/Hype-The-Hike" />
 </a>
 </div>
