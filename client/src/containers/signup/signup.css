@@ -37,7 +37,7 @@ video {
 
 .sign__input {
     padding: 0rem 2rem;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2a2b32;
     color: white;
     font-weight: bold;
@@ -76,7 +76,7 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: var(--color-primary);
     color: var(--color-boxShadow);
     font-weight: bold;

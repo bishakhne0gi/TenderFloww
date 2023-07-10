@@ -5,7 +5,7 @@
     width: auto;
     min-width: 90vw;
     color: white;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 9px 4px 24px 0px var(--color-boxShadow);
     transition: ease 1s;
 }
@@ -25,7 +25,7 @@
 
 
 .projects__login_btn {
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: var(--color-primary);
     color: white;
     font-weight: bold;
@@ -68,7 +68,7 @@
     align-items: center;
     padding: 0rem 2rem;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2a2b32;
     color: white;
     font-weight: bold;
@@ -95,7 +95,7 @@
     cursor: pointer;
     transition: ease 0.5s;
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .projects_search_filter_by:hover {
@@ -116,7 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2a2b32;
     color: white;
     font-weight: bold;
@@ -133,7 +133,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2a2b32;
     color: white;
     font-weight: bold;
@@ -160,7 +160,7 @@
     min-height: 70vh;
     min-width: 60vw;
     background-color: antiquewhite;
-    border-radius: 30px;
+    border-radius: 10px;
     backdrop-filter: blur(60px);
     background: linear-gradient(136deg, rgba(238, 238, 238, 0.50) 0%, rgba(87, 97, 242, 0.50) 89.58%);
     filter: blur(0px);

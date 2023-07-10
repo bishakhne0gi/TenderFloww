@@ -2,7 +2,7 @@
 
     background: rgba(31, 32, 39, 0.47);
     box-shadow: 9px 4px 24px 0px #1E1E1E;
-    border-radius: 30px;
+    border-radius: 10px;
     background: var(--color-boxShadow);
     min-height: 80vh;
     height: auto;
@@ -54,7 +54,7 @@
 }
 
 .admin__get_started {
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: var(--color-primary);
     color: white;
     font-weight: bold;
@@ -67,7 +67,7 @@
 }
 
 .admin__tender {
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #2a2b32;
     color: white;
     font-weight: bold;
@@ -88,7 +88,7 @@
     min-height: 70vh;
     min-width: 60vw;
     /* background-color: antiquewhite; */
-    border-radius: 30px;
+    border-radius: 10px;
     /* backdrop-filter: blur(60px); */
     /* background: linear-gradient(136deg, rgba(238, 238, 238, 0.50) 0%, rgba(87, 97, 242, 0.50) 89.58%); */
     filter: blur(0px);

@@ -40,7 +40,7 @@
     width: auto;
     min-width: 80vw;
     color: white;
-    border-radius: 30px;
+    border-radius: 10px;
     transition: ease 1s;
     display: flex;
     flex-direction: row;
@@ -89,8 +89,8 @@
 
 .bid__container_left_btns {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     /* justify-content: center; */
 }
@@ -116,7 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: #1F2027;
     color: white;
     font-weight: bold;
@@ -174,13 +174,13 @@
 .bid__container_leaderboard {
     height: 100vh;
     width: 30vw;
-    border-radius: 30px;
+    border-radius: 10px;
     background: linear-gradient(136deg, rgba(238, 238, 238, 0.50) 0%, rgba(87, 97, 242, 0.50) 89.58%);
 }
 
 
 .bid__body_list {
-    height: 75vh;
+    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
 }

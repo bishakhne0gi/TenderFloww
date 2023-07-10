@@ -18,7 +18,7 @@
     height: 30rem;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 30px;
+    border-radius: 10px;
     background: var(--color-boxShadow);
     box-shadow: 9px 4px 24px 0px var(--color-boxShadow);
     color: white;
@@ -62,7 +62,7 @@
 }
 
 .landing__get_started {
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: var(--color-primary);
     color: white;
     font-weight: bold;

@@ -112,22 +112,9 @@ const Projects = () => {
             </div>
 
             <div className="project__body_list">
-              {isActiveListvisible ? (
-                <>
-                  <ListActive />
-                  <ListActive />
-                  <ListActive />
-                  <ListActive />
-                </>
-              ) : (
-                <>
-                  <ListPast />
-                  <ListPast />
-                  <ListPast />
-                  <ListPast />
-                  <ListPast />
-                </>
-              )}
+              {tendersData?.map((data, key) => {
+                return <ListActive data={data} key={key} />;
+              })}
             </div>
           </div>
         </div>

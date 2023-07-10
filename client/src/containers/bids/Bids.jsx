@@ -10,7 +10,7 @@ import {
 import { createCollectionSetupInFlow } from "../../Transactions/storebiddingCollection";
 import Logo from "../../assets/logo (2).png";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { FlowState } from "../../context/FlowProvider";
 import * as fcl from "@onflow/fcl";
@@ -18,6 +18,9 @@ import * as fcl from "@onflow/fcl";
 const Bids = () => {
   const { user, setTxId, status } = FlowState();
   const navigate = useNavigate();
+  const search = useLocation().search;
+  const tender_id = new URLSearchParams(search).get("tender_id");
+  console.log(tender_id);
 
   const goTo__landing = () => {
     navigate("/");
@@ -60,77 +63,72 @@ const Bids = () => {
               <Description />
             </div>
           </div>
-
-          <div className="bid__container_left_btns">
-            <div className="btns_left">
-              {user.loggedIn ? (
-                <>
-                  <div className="btn__wallet_connect_1">
-                    <button
-                      className="btn__wallet_connect"
-                      onClick={() => {
-                        AsyncTxhandle();
-                      }}
-                    >
-                      Collection Setup
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="btn__wallet_connect_1">
-                    <button
-                      className="btn__wallet_connect"
-                      onClick={() => {
-                        fcl.logIn();
-                      }}
-                    >
-                      Login
-                    </button>
-                  </div>
-                  <div className="btn__wallet_connect_1">
-                    <button
-                      className="btn__wallet_connect"
-                      onClick={() => {
-                        fcl.signUp();
-                      }}
-                    >
-                      Sign up
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-
-            <div className="btns_right">
-              <div className="btn__wallet_trans_container">
-                <button className="btn__wallet_trans">
-                  <input
-                    className="input__wallet_trans"
-                    placeholder="0.00001"
-                  ></input>
-                  Flow
-                </button>
-              </div>
-
-              <div className="btn__wallet_bid_container">
-                <button className="btn__wallet_bid">Place Bid</button>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="bid__container_right">
           <div className="bid__container_leaderboard">
+            <div className="bid__container_left_btns">
+              <div className="btns_left">
+                {user.loggedIn ? (
+                  <>
+                    <div className="btn__wallet_connect_1">
+                      <button
+                        className="btn__wallet_connect"
+                        onClick={() => {
+                          AsyncTxhandle();
+                        }}
+                      >
+                        Collection Setup
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="btn__wallet_connect_1">
+                      <button
+                        className="btn__wallet_connect"
+                        onClick={() => {
+                          fcl.logIn();
+                        }}
+                      >
+                        Login
+                      </button>
+                    </div>
+                    <div className="btn__wallet_connect_1">
+                      <button
+                        className="btn__wallet_connect"
+                        onClick={() => {
+                          fcl.signUp();
+                        }}
+                      >
+                        Sign up
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <div className="btns_right">
+                <div className="btn__wallet_trans_container">
+                  <button className="btn__wallet_trans">
+                    <input
+                      className="input__wallet_trans"
+                      placeholder="0.00001"
+                    ></input>
+                    Flow
+                  </button>
+                </div>
+
+                <div className="btn__wallet_bid_container">
+                  <button className="btn__wallet_bid">Place Bid</button>
+                </div>
+              </div>
+            </div>
             <div className="project__body_header_active">
               <BidHeader />
             </div>
 
             <div className="bid__body_list">
-              <ListBid />
-              <ListBid />
-              <ListBid />
-              <ListBid />
               <ListBid />
             </div>
           </div>

@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem 2rem;
-    border-radius: 30px;
+    border-radius: 10px;
     transition: ease 0.5s;
     overflow-y: auto;
     overflow-x: hidden;
