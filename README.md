@@ -5,12 +5,12 @@
     <img src="https://github.com/bishakhne0gi/TenderFloww/assets/50258639/d6f8c2b3-9a96-4395-9712-8543771c53b9" alt="Logo" width="120" height="120">
   </a>
 
-
 ## Decentralized auction for getting tenders
 
 📹 <b><a align="center" href="https://www.youtube.com/watch?v=AWZpPUwqZ2s">Watch Demo Video</a></b><br/>
 📺
 <b><a align="center" href="or-jurm-nahi-b.us">Live</a></b>
+
 </div>
 <div align="center">
  
@@ -58,11 +58,7 @@
 
 ## 🤩🤩 About The Project 🤩🤩
 
-
-
-
 https://github.com/bishakhne0gi/TenderFloww/assets/63441472/1c7e6ef7-1d47-4548-8737-1d9139280971
-
 
 ### 💭 Inspiration
 
@@ -89,18 +85,20 @@ Blockchain (one of the ways to implement decentralization) steps into the pictur
 - On the landing page, See the listing of tenders posted by the government.
 - After clicking a specific **tender** participants can participate in an auction bid using the **bidding portal**.
 - After clicking the **Register** button, the user can log in using the **Blockto** wallet.
-- then they can bid on a tender using a flow 
+- then they can bid on a tender using a flow
 - Upon the end of the Auction the bidding will be settled and the lowest bidder will be awarded an NFT that signifies the ownership of the tender
 - On the New Ledger page, users can create their **custom fields and data** and upload **files**.
-- On the admin panel government can create new bids and assign its metadata, which will be listed on the site 
-- Admin can select the duration of the bid and upon end of Auction, the tender will be automatically  awarded to the winner
+- On the admin panel government can create new bids and assign its metadata, which will be listed on the site
+- Admin can select the duration of the bid and upon end of Auction, the tender will be automatically awarded to the winner
+- Insufficient quota in our cloud account prevented us from creating a VPC network in GCP, causing problem in establishing a seamless connection between the Cloud SQL and VM instance.
+- Faced timeout errors with the Google Cloud Auth proxy, impacting the authentication process and causing disruptions in the project workflow.
+- Faces issue during private IP exposure and adjusting firewall settings were necessary steps to establish a successful connection between the two cloud services.
 
 ### 💀 Challenges we ran into
 
 - Since blockchain is a fairly new technology, we faced difficulties in finding solutions for bugs due to a smaller community.
 - Cadence was pretty hard for us to learn and implement on that large scale, Resources was scarce too
 - Flow Testnet was crashing sometimes
-  
 
 ### 🔮 What's Next For Our Project
 
@@ -109,18 +107,66 @@ Blockchain (one of the ways to implement decentralization) steps into the pictur
 
 ## 💻 Built With
 
-- <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="30px" width="30px"> **React** - for building the frontend UI
-- <img src="https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height="30px" width="30px"> **Vite** - as a module bundler instead of webpack
-- <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> **Flow** - as the main blockchain
-- <img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> **Cadence** - for writing smart contracts
-- <img src="https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height="40px" width="40px"> **Filecoin** - as IPFS
-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" height="40px" width="140px"> **GCP** - as our cloud service provider
-- <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="40px" width="60px"> **Node.js** - as the backend runtime
-- <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" height="40px" width="50px"> **Express.js** - as our backend framework
-- <img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="50px" width="40px"> **GCP Cloud SQL** - as our off-chain database
-- <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" height="50px" width="50px"> **Docker** - for containerization
-- <img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height="40px" width="40px">  **Postman** for documenting our APIs
-- .XYZ for our domain registry
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" height="30px" width="30px"> 
+<h4>React- JavaScript library for building UI</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height="30px" width="30px">
+<h4>Vite - Frontend Build tool</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px">
+<h4>Flow - Main decentralized, public layer blockchain</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://cryptologos.cc/logos/flow-flow-logo.png?v=025" height="40px" width="40px"> 
+<h4>Cadence - Smart contract programming language</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height="40px" width="40px"> 
+<h4>Filecoin - Decentralized storage network</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png" height="40px"> 
+<h4>GCP - Cloud service provider</h4>
+</div>
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem; margin-left: 3rem">
+<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/77382f10-b4bf-4181-ad11-e3da43dfa541" height="30px" width="30px" > 
+<h4>Cloud SQL - Relational Database Service</h4>
+<img src="https://w7.pngwing.com/pngs/362/50/png-transparent-google-cloud-platform-google-compute-engine-kubernetes-docker-container-blue-angle-service.png" height="30px" width="30px"> 
+<h4>Compute Engine - Virtual Machine</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="40px" width="60px"> 
+<h4>Node.js - as the backend runtime</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" height="40px" width="50px"> 
+<h4>Express.js - as our backend framework</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" height="50px" width="50px"> 
+<h4>Docker - for containerization</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://github.com/bishakhne0gi/TenderFloww/assets/63441472/187c1593-c2ae-4dea-8038-54442bd2e45e" height="40px" width="40px"> 
+<h4>Postman for documenting our APIs</h4>
+</div>
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 1rem">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/.xyz_logo.svg/1280px-.xyz_logo.svg.png" height="40px" width="60px"> 
+<h4>.XYZ for our domain registry</h4>
+</div>
 
 ## Getting Started
 
@@ -176,7 +222,7 @@ Follow the steps below to set up the project:
     --key <your Public key from flow Cli>\
     --host access.devnet.nodes.onflow.org:9000 \
     --signer my-testnet-account
-    ```
+   ```
 
    For more information, refer to the [testnet deployment guide](https://developers.flow.com/tutorials/testnet-deployment).
 
@@ -192,7 +238,7 @@ Follow the steps below to set up the project:
    npm start dev
    ```
 
-<!-- USAGE EXAMPLES 
+<!-- USAGE EXAMPLES
 ## Usage
 <div align="center">
 <img src="https://media2.giphy.com/media/UYpelo7WbjZQg0dDQY/200.gif" width="500" height="200" />
@@ -217,6 +263,7 @@ See the [open issues](https://github.com/arnab2001/Ledged/issues) for a full lis
 If you have a suggestion that would make this project better, please fork the repo and create a pull request. You can also simply open an issue with the tag "improvement". Don't forget to star this project!
 
 To contribute:
+
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/Feature1`)
 3. Commit your Changes (`git commit -m 'Add Feature 1'`)
@@ -237,4 +284,3 @@ Distributed under the MIT License.
   <img src="https://contrib.rocks/image?repo=bishakhne0gi/TenderFloww" />
 </a>
 </div>
-
