@@ -1,6 +1,7 @@
 const express = require("express");
 const { generateUniqueId, generateUniqueTenderId } = require("../utils/utils");
 const mysql = require("mysql");
+const crypto = require("crypto");
 const {
   createNewTableTenders,
   insertTendersData,
@@ -10,6 +11,9 @@ const {
   placeBid,
   updateWinner,
   fetchExpWinner,
+  updateWinnerExperience,
+  fetchExpAndMailWinner,
+  settleTender,
 } = require("../database/queries");
 const db_config = require("../database/cloudsql");
 const authorization = require("../middleware/authorization");
@@ -146,6 +150,38 @@ router.get("/tender/display", (request, response) => {
   }
 });
 
+// Display a single tender
+router.get("/tender/display?id", (request, response) => {
+  if (!request.query.id) {
+    response.status(500).json({ message: "unable to fetch tender" });
+    return;
+  }
+
+  try {
+    const db = mysql.createConnection(db_config);
+    db.query(displayOneTenderData, [id], async (error, result) => {
+      if (error) {
+        response.status(500).json({ message: "unable to fetch tenders" });
+        return;
+      }
+      if (result.length == 0) {
+        response.status(400).json({ message: "no tender found with this id" });
+      }
+      response.status(200).json({ message: result[0] });
+
+      db.end((error) => {
+        if (error) {
+          response.status(500).json({ message: error });
+          return;
+        }
+      });
+    });
+  } catch (error) {
+    response.status(500).json({ message: error });
+    return;
+  }
+});
+
 // Place a bid
 router.post("/placebid", authorization, (request, response) => {
   const { tender_id, biddingAmount } = request.body;
@@ -194,10 +230,15 @@ router.post("/placebid", authorization, (request, response) => {
           response.status(500).json({ message: error });
           return;
         }
+        let placedBid_id = crypto.randomBytes(15).toString("hex");
+        if (!placedBid_id) {
+          response.status(500).json({ message: "unable to place bid" });
+          return;
+        }
 
         db.query(
           placeBid,
-          [tender_id, request.bidder.email, biddingAmount],
+          [placedBid_id, tender_id, request.bidder.email, biddingAmount],
           (error, result) => {
             if (error) {
               if (error.code === "ER_DUP_ENTRY") {
@@ -238,8 +279,6 @@ router.post("/placebid", authorization, (request, response) => {
                 }
               );
             }
-
-            
           }
         );
       });
@@ -252,16 +291,67 @@ router.post("/placebid", authorization, (request, response) => {
 
 // Auction Settle
 router.post("/settle", (request, response) => {
-    // Fetch experience of Current Winner Email
-    try {
-      const db = mysql.createConnection(db_config);
-      db.query(fetchExpWinner, [])
-    } catch (error) {
-      
-    }
+  const { tender_id } = request.body;
+  if (!tender_id) {
+    response.status(400).json({ message: "no tender id found" });
+    return;
+  }
+  // Fetch experience of Current Winner Email
+  try {
+    const db = mysql.createConnection(db_config);
+    db.query(displayOneTenderData, [tender_id], (error, result) => {
+      if (result.length == 0) {
+        response
+          .status(400)
+          .json({ message: "no tender found with this tender id" });
+        return;
+      }
 
-    // Add experience of the current_tender with winner email
+      let TenderWinningExperience = result[0]._exp;
 
-})
+      db.query(fetchExpAndMailWinner, [tender_id], (error, result) => {
+        if (result.length == 0) {
+          response.status(400).json({ message: "no bidder found" });
+          return;
+        }
+
+        let updatedExperience = result[0].exp + TenderWinningExperience;
+        let winnerEmail = result[0].email;
+
+        db.query(settleTender, [tender_id], (error, result) => {
+          if (error) {
+            response.status(500).json({ message: error });
+            return;
+          }
+
+          db.query(
+            updateWinnerExperience,
+            [updatedExperience, winnerEmail],
+            (error, result) => {
+              if (error) {
+                response.status(500).json({ message: error });
+                return;
+              }
+              response.status(200).json({
+                message: "Successfully settled!",
+                final_winner: winnerEmail,
+              });
+
+              db.end((error) => {
+                if (error) {
+                  response.status(500).json({ message: error });
+                  return;
+                }
+              });
+            }
+          );
+        });
+      });
+    });
+  } catch (error) {
+    response.status(500).json({ message: error });
+    return;
+  }
+});
 // Get NFTS of a bidder
 module.exports = router;
