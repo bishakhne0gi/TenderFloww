@@ -23,16 +23,28 @@ router.get("/tender/id", (request, response) => {
 
 // Create New Tender
 router.post("/tender/create", (request, response) => {
-  const { name, description, criteria, tender_id, opening_date, closing_date } =
-    request.body;
+  const {
+    _title,
+    tender_id,
+    _ipfsHash,
+    _description,
+    _minimumExp,
+    _exp,
+    opening_date,
+    biddingLength,
+    startPrice,
+  } = request.body;
 
   if (
-    !name ||
-    !description ||
-    !criteria ||
+    !_title ||
     !tender_id ||
+    !_ipfsHash ||
+    !_description ||
+    !_minimumExp ||
+    !_exp ||
     !opening_date ||
-    !closing_date
+    !biddingLength ||
+    !startPrice
   ) {
     response
       .status(401)
@@ -42,19 +54,11 @@ router.post("/tender/create", (request, response) => {
 
   const currentDate = new Date();
   const openingDate = new Date(opening_date);
-  const closingDate = new Date(closing_date);
 
   // Check Opening & closing date is valid or not
-  if (openingDate <= currentDate) {
+  if (openingDate < currentDate) {
     response.status(401).json({
-      message: "the opening date cannot be greater than the current date",
-    });
-    return;
-  }
-
-  if (openingDate >= closingDate) {
-    response.status(401).json({
-      message: "the opening date cannot be greater than the closing date",
+      message: "the opening date cannot be lesser than the current date",
     });
     return;
   }
@@ -71,7 +75,17 @@ router.post("/tender/create", (request, response) => {
       // Insert tender's data
       db.query(
         insertTendersData,
-        [name, tender_id, description, criteria, opening_date, closing_date],
+        [
+          _title,
+          tender_id,
+          _ipfsHash,
+          _description,
+          _minimumExp,
+          _exp,
+          opening_date,
+          biddingLength,
+          startPrice,
+        ],
         (error, rows) => {
           if (error) {
             response.status(500).json({ message: error });

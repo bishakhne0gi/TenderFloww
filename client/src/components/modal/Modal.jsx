@@ -48,12 +48,12 @@ const Modal = ({ setOpenModal }) => {
         tenderState,
         axiosConfig
       );
+      
       console.log(data.message);
-    } catch (e) {
-      console.log(e);
-    } finally {
       setOpenModal(false);
-    }
+    } catch (e) {
+      console.log(e.response?.data);
+    } 
   };
 
   return (
@@ -73,6 +73,7 @@ const Modal = ({ setOpenModal }) => {
                   onChange={(e) =>
                     handleValueChange("tender_id", e.target.value)
                   }
+                  readOnly
                 ></input>
               </div>
 
