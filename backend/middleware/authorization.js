@@ -5,7 +5,6 @@ const secretKey = process.env.JWT_SECRET;
 module.exports = (request, response, next) => {
   try {
     authorization = request.cookies.authorization;
-
     if (!authorization) {
       response.status(401).json({ message: "Authorization failed" });
       return;
@@ -15,7 +14,7 @@ module.exports = (request, response, next) => {
 
     jwt.verify(token, secretKey, (error, payload) => {
       if (error) {
-        response.status(401).json({ message: error.message });
+        response.status(401).json({ message: error });
         return;
       }
 

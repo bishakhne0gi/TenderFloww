@@ -91,8 +91,10 @@ router.post("/login", validateEmail, async (request, response) => {
         return;
       }
 
-      if(result.length === 0) {
-        response.status(400).json({ message: "no bidder found with this email" });
+      if (result.length === 0) {
+        response
+          .status(400)
+          .json({ message: "no bidder found with this email" });
         return;
       }
 
@@ -112,7 +114,14 @@ router.post("/login", validateEmail, async (request, response) => {
       // Generate JWT Token
       const username = result[0].name;
       const registration = result[0].registration;
-      const token = jwt.sign({ username, registration, email }, secretToken);
+      const experience = result[0].exp;
+      
+
+      // JWT Token Expiry = 24 Hours
+      const token = jwt.sign(
+        {username, registration, experience, email, exp : Math.floor(Date.now() / 1000) + (60 * 60 * 24)}, 
+        secretToken
+      );
 
       response.cookie("authorization", `bearer ${token}`, {
         secure: true,
@@ -173,7 +182,7 @@ router.post(
     const fileExt = request.file.originalname.split(".")[1];
     if (fileExt !== "jpeg" && fileExt !== "png" && fileExt !== "jpg") {
       response
-        .status(401)
+        .status(415)
         .json({ message: "only jpeg, jpg, png files are allowed" });
       return;
     }

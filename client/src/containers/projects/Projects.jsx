@@ -10,6 +10,8 @@ import {
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import Logo from "../../assets/logo (2).png";
 import { useNavigate } from "react-router-dom";
+import useSWR from "swr";
+import axios from "axios";
 
 const Projects = () => {
   const [isPastListvisible, setisPastListvisible] = useState(false);
@@ -39,13 +41,13 @@ const Projects = () => {
       .finally(() => console.log(tendersData));
 
   // Fetch tender id
-  // const { data, error } = useSWR(
-  //   "http://localhost:5000/tender/display",
-  //   fetcher
-  // );
-  // if (error) {
-  //   console.log(error.response?.data);
-  // }
+  const { data, error } = useSWR(
+    "http://localhost:5000/tender/display",
+    fetcher
+  );
+  if (error) {
+    console.log(error?.data);
+  }
 
   return (
     <>
